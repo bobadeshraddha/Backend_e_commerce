@@ -8,7 +8,7 @@ function verifyToken(req,res,next){
     return res.status(403).json({ status:0, message:' No token provided.'});
    }
 
-   jwt.verify(token,'secret',(error,decoded)=>{
+   jwt.verify(token,'privatekey',(error,decoded)=>{
     if(error){
         return res.status(500).json({ status:0,message:'Invalid token.'});
     }
