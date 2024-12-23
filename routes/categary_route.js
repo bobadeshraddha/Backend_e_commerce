@@ -3,12 +3,12 @@ const router = express.Router();
 const userController = require("../controller/controller_categary");
 const verifyToken = require("../middlewere/auth");
 
-router.post("/create",  userController.createcategary);
+router.post("/create", userController.createcategary);
 
-router.delete("/delete",verifyToken, userController.deletecategary);
+router.delete("/delete", userController.deletecategary);
 
-router.put("/update",verifyToken, userController.updatecategary);
+router.put("/update", userController.updatecategary);
 
-router.get("/get",verifyToken, userController.getcategary);
+router.get("/get", userController.getcategary);
 
 module.exports = router;

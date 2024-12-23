@@ -24,6 +24,11 @@ async function createcategary(req, res) {
 
 async function deletecategary(req, res) {
   const categaryID = req.body.categaryID;
+  console.log(categaryID);
+
+  if (!categaryID){
+    res.status(400).json({ message: "not found"});
+  }
 
   try {
     const deletecategary = await categarymodel.findByIdAndDelete(categaryID);

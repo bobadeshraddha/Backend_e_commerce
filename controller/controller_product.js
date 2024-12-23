@@ -5,7 +5,7 @@ async function addproduct(req, res) {
 
   try {
 if
-    (!name || !price || !discontedPrice || !Image || !discription ){
+    (!name || !price || !discontedPrice || !discription ){
         return res.status(400).json ({message: "please enter all fields"})
   }
 
@@ -13,7 +13,6 @@ if
    name,
    price,
    discontedPrice,
-   Image,
    discription,
    categaryType
 });
