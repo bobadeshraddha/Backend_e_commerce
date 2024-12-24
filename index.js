@@ -10,12 +10,15 @@ var admin = require("./routes/admin_route");
 var categary = require("./routes/categary_route");
 var product = require("./routes/product_route");
 var cart = require("./routes/cart_route");
+var wishlist = require("./routes/wishlist_route");
 
 app.use("/api/user", user);
 app.use("/api/admin", admin);
 app.use("/api/categary", categary);
 app.use("/api/product", product);
 app.use("/api/cart", cart);
+app.use("/api/wishlist", wishlist);
+
 
 mongoose
   .connect(

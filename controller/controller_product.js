@@ -13,6 +13,7 @@ if
    name,
    price,
    discontedPrice,
+   Image,
    discription,
    categaryType
 });

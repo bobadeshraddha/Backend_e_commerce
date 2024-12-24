@@ -61,8 +61,25 @@ async function loginUser(req, res) {
   }
 }
 
+async function getAlluser(req, res) {
+
+  try {
+
+    var Alluser = await userModel.find();
+
+  res.status(201).json({
+  message : "add successfully ",Alluser
+  });
+
+  } catch (error) {
+    res.status(500).json({ message: "something went wrong ",error });
+  }
+}
+
+
 module.exports = {
     registeruser,
     loginUser,
+    getAlluser
 }
 
